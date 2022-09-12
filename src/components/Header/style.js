@@ -14,6 +14,11 @@ export const Container = styled.div`
   @media screen and (max-width: 1340px) {
     margin: 0 20px;
   }
+
+  @media screen and (max-width: 580px) {
+    height: auto;
+    margin-top: 20px;
+  }
 `;
 
 export const ContainerHeader = styled.header`
@@ -22,6 +27,8 @@ export const ContainerHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  border: 1px solid red;
 
   @media screen and (max-width: 580px) {
     flex-direction: column;
@@ -37,10 +44,12 @@ export const Buttons = styled.div`
   justify-content: center;
   gap: 20px;
 
-  border: 1px solid red;
-
   @media screen and (max-width: 360px) {
-    width: 80%;
+    padding-left: 50px;
+    height: 50px;
+    width: 300px;
     overflow-x: scroll;
+
+    border: 1px solid red;
   }
 `;
