@@ -1,16 +1,18 @@
-import Card from "../Card";
+import { useContext } from "react";
 import { Container } from "./style";
+import { ProductContext } from "../../contexts/ProductContext";
+import Card from "../Card";
 
 const CardList = () => {
+  const { product } = useContext(ProductContext);
+
+  console.log("Fora do contexto: ", product);
+
   return (
     <Container>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {product.map((product) => (
+        <Card key={product.id} product={product} />
+      ))}
     </Container>
   );
 };

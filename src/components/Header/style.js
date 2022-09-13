@@ -11,8 +11,10 @@ export const Container = styled.div`
   background-color: var(--grey-0);
   box-shadow: 0px 4px 30px -10px rgba(0, 0, 0, 0.25);
 
+  margin-bottom: 50px;
+
   @media screen and (max-width: 1340px) {
-    margin: 0 20px;
+    padding: 0 20px;
   }
 
   @media screen and (max-width: 580px) {

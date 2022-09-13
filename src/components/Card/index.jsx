@@ -1,18 +1,17 @@
-import pic1 from "../../assets/pic1.png";
-import { Container } from "./style";
+import { useContext } from "react";
+import { Container, ContainerDescription } from "./style";
 
-const Card = () => {
+const Card = ({ product }) => {
   return (
     <Container>
-      <img src={pic1} alt="imagem do produto 1" />
-      <span>Camisetas</span>
-      <h3>Containeghtweigth Jacket</h3>
-      <p>
-        Adicione um pouco de energia ao seu guarda-roupa de inverno com esta
-        jaqueta vibrante...
-      </p>
-      <span>R$ 100.00</span>
-      <button>Adicionar ao carrinho</button>
+      <img src={product.img} alt="imagem do produto 1" />
+      <ContainerDescription>
+        <span className="card-category">{product.category}</span>
+        <h3>{product.name}</h3>
+        <p>{product.description}</p>
+        <span className="card-price">{product.price}</span>
+        <button>Adicionar ao carrinho</button>
+      </ContainerDescription>
     </Container>
   );
 };

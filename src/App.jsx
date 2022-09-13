@@ -1,15 +1,22 @@
 import "./App.css";
 import CardList from "./components/CardList";
 import Header from "./components/Header";
+import Main from "./components/Main";
+import SearchBar from "./components/SearchBar";
+import ProductProvider from "./contexts/ProductContext";
 import GlobalStyle from "./styles/global";
 
 function App() {
   return (
-    <div className="App">
-      <GlobalStyle />
-      <Header />
-      <CardList />
-    </div>
+    <ProductProvider>
+      <div className="App">
+        <GlobalStyle />
+        <Header />
+        <Main />
+        {/* <CardList />
+      <SearchBar /> */}
+      </div>
+    </ProductProvider>
   );
 }
 
